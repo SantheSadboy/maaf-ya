@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> maaf yaa </title>
+    <style>
+        body {
+            background-color: #666;
+            color: white;
+        }
+
+        .animated-text {
+            font-size: 36px;
+            display: inline-block;
+            animation: moveText 3s linear infinite, colorChange 5s alternate infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes colorChange {
+            0% { color: white; }
+            50% { color: #f39c12; }
+            100% { color: white; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ucapan Minta Maaf</h1>
+    <input type="text" id="ucapanInput" placeholder="maafin aku yaa aliyennn">
+    <button onclick="tampilkanUcapanMintaMaaf()">Tampilkan</button>
+    <p id="pesanUcapan"></p>
+
+    <script>
+        function tampilkanUcapanMintaMaaf() {
+            var ucapanMintaMaaf = document.getElementById("ucapanInput").value;
+            var pesanUcapan = document.getElementById("pesanUcapan");
+            pesanUcapan.innerHTML = "Anda mengatakan: Wanna "maafin aku yaa aliyennn;
+            pesanUcapan.classList.add("pesan-animasi"); // Menambahkan kelas dengan animasi
+        }
+    </script>
+</body>
+</html>
